@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    
+    int n; 
+    printf("Enter the number of integers: ");
+    scanf("%d", &n);
+    
+    int numbers[n];
+    printf("Enter %d integers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    int sum_of_last_digits = 0;
+    for (int i = 0; i < n; i++) {
+        int last_digit = numbers[i] % 10;
+        sum_of_last_digits += last_digit;
+    }
+
+    printf("Sum of the last digits: %d\n", sum_of_last_digits);
+
+    return 0;
+}
